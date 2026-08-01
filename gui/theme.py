@@ -1,0 +1,5 @@
+HEADER_BACKGROUND="#161613"
+
+HEADER_TITLE_FONT=("Segoe UI", 28, "bold")
+
+HEADER_SUBTITLE_FONT=("Segoe UI", 15, "bold")
