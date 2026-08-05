@@ -2,6 +2,7 @@ from tkinter import *
 import gui.theme as theme
 from PIL import Image, ImageTk
 
+
 class Header:
     def __init__(self):
         self.headerframe=None
@@ -19,7 +20,7 @@ class Header:
 
 
     def Create_headerframe(self,window):
-        self.headerframe=Frame(window,height=100,bg=theme.HEADER_BACKGROUND)
+        self.headerframe=Frame(window,height=80,bg=theme.HEADER_BACKGROUND)
 
 
 
@@ -56,7 +57,7 @@ class Header:
        self.LogoPicture.pack(side="left",padx=20,anchor="w")
        self.LogoPicture.pack_propagate(False)
 
-       self.ProjectTitle.pack(side="top",anchor="w",padx=10,pady=5)
-       self.SubTitle.pack(side="bottom",anchor="w",padx=10,pady=5)
+       self.ProjectTitle.pack(side="top",anchor="w",padx=10,pady=3)
+       self.SubTitle.pack(side="bottom",anchor="w",padx=10,pady=8)
 
 

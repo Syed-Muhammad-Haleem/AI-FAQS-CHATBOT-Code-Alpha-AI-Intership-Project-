@@ -1,5 +1,13 @@
 HEADER_BACKGROUND="#161613"
 
-HEADER_TITLE_FONT=("Segoe UI", 28, "bold")
+HEADER_TITLE_FONT=("Segoe UI", 20, "bold")
 
-HEADER_SUBTITLE_FONT=("Segoe UI", 15, "bold")
+HEADER_SUBTITLE_FONT=("Segoe UI", 10, "bold")
+
+CHAT_AREA_BACKGROUND="#24241F"
+
+ENTRY_BOX_FONT=("Segoe UI", 13, "bold")
+
+SEND_BUTTON_FONT= ("Segoe UI Symbol", 15, "bold")
+
+BOT_MESSAGE_FONT=("Segoe UI", 12)
