@@ -61,6 +61,6 @@ class Footer:
     def Pack_Widgets(self):
         self.FooterFrame.pack(fill="x",pady=1)
         self.FooterFrame.pack_propagate(False)
-        self.Input_Frame.pack(side="left",padx=220,pady=10)
+        self.Input_Frame.pack(side="left",padx=240,pady=10)
         self.EntryBox.pack(side="left", padx=5, pady=5,ipady=5,anchor="center")
         self.SendButton.pack(side="right", padx=5, pady=5)
