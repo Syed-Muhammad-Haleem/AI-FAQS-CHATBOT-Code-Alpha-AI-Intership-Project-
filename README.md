@@ -97,18 +97,21 @@ Each major responsibility is handled by a separate class.
 
 ---
 
-# 📂 Project Structure
+## 📂 Project Structure
 
-
+```text
 FAQs ChatBot Project/
 │
 ├── main.py
+├── requirements.txt
+├── README.md
+├── .gitignore
 │
 ├── core/
 │   ├── chat_bot.py
 │   ├── dataSet_Loader.py
-│   ├── text_processor.py
-│   └── search_engine.py
+│   ├── search_engine.py
+│   └── textProcessor.py
 │
 ├── gui/
 │   ├── header.py
@@ -119,15 +122,10 @@ FAQs ChatBot Project/
 ├── dataset/
 │   └── faq.csv
 │
-├── assets/
-│   └── logo/
-│   └── screenshots/
-│
-├── .gitignore
-│
-│── requirements.txt
-└── README.md
-```
+└── assets/
+    ├── logo/
+    └── screenshots/
+
 
 ## 🧩 Component Responsibilities
 
