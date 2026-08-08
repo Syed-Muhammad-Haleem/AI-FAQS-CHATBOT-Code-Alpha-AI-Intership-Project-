@@ -1,6 +1,7 @@
 from tkinter import *
 import gui.theme as theme
 
+
 class ChatArea:
     def __init__(self):
        self.chat_area_frame=None
@@ -54,14 +55,20 @@ class ChatArea:
         
     
         
-    def Create_BotMessage(self):
-        BotMessage=Label(self.chat_frame,text="I'm here to help! What do you need?",bg=theme.CHAT_AREA_BACKGROUND,fg="white",font=theme.BOT_MESSAGE_FONT,wraplength=500,justify="left",padx=10,pady=5)
+    def Create_BotMessage(self,answer="I'm here to help! What do you need?"):
+        BotMessage=Label(self.chat_frame,text=answer,bg=theme.BOT_MESSAGE_BACKGROUND,fg="white",font=theme.BOT_MESSAGE_FONT,wraplength=500,justify="left",padx=10,pady=5)
         BotMessage.pack(anchor="w",pady=20,padx=15)
+        self.chat_Canvas.update_idletasks()
+        self.chat_Canvas.yview_moveto(1.0)
 
 
     def Create_UserMessage(self,Message):
-        UserMessage=Label(self.chat_frame,text=Message,bg=theme.CHAT_AREA_BACKGROUND,fg="white",font=theme.BOT_MESSAGE_FONT,wraplength=400,justify="left",padx=10,pady=5)
-        UserMessage.pack(anchor="w",pady=20,padx=400)
+        UserMessage=Label(self.chat_frame,text=Message,bg=theme.USER_MESSAGE_BACKGROUND,fg="white",font=theme.BOT_MESSAGE_FONT,wraplength=350,justify="left",padx=10,pady=5)
+        UserMessage.pack(anchor="w",pady=20,padx=520)
+        self.chat_Canvas.update_idletasks()
+        self.chat_Canvas.yview_moveto(1.0)
+        
+       
 
 
     def pack_Widgets(self):

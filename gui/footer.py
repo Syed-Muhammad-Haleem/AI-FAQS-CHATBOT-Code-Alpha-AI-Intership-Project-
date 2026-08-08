@@ -3,8 +3,8 @@ import gui.theme as theme
 from gui.chat_area import  ChatArea
 
 class Footer:
-    def __init__(self,ChatArea_Object):
-        self.ChatArea_Object=ChatArea_Object
+    def __init__(self,send_message_function):
+        self.send_message_function=send_message_function
         self.FooterFrame=None
         self.Input_Frame=None
         self.EntryBox=None
@@ -29,7 +29,7 @@ class Footer:
 
 
     def Create_EntryBox(self):
-        self.EntryBox=Entry(self.Input_Frame,font=theme.ENTRY_BOX_FONT,width=80,bg="#24241F",fg="White")
+        self.EntryBox=Entry(self.Input_Frame,font=theme.ENTRY_BOX_FONT,width=80,bg="#24241F",fg="White",insertbackground="white")
         self.EntryBox.insert(0, self.placeholder)
 
 
@@ -39,7 +39,8 @@ class Footer:
 
     def Send_Message_To_CharArea(self):
         Message=self.EntryBox.get()
-        self.ChatArea_Object.Create_UserMessage(Message)
+        self.send_message_function(Message)
+        self.EntryBox.delete(0, END)
 
 
     def clear_placeholder(self,event):

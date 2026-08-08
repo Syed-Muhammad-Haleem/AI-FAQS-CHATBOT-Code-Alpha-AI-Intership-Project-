@@ -10,10 +10,11 @@ class Header:
         self.ProjectTitle=None
         self.SubTitle=None
         self.LogoImage=None
+        
 
     def Creater_Header(self,window):
         self.Create_headerframe(window)
-        self.Create_Picture()
+        self.Create_Picture(window)
         self.Create_Title()
         self.Create_SubTite()
         self.Pack_Widgets()
@@ -24,7 +25,7 @@ class Header:
 
 
 
-    def Create_Picture(self):
+    def Create_Picture(self,window):
 
         image = Image.open("assets/logo/logo.png")
         image = image.resize((70, 70))
@@ -32,6 +33,9 @@ class Header:
 
         self.LogoImage=Logo_image # keep the reference of picture
         self.LogoPicture=Label(self.headerframe,image=Logo_image,relief="flat",bd=0)
+
+        window.iconphoto(True, Logo_image)
+
 
 
 
